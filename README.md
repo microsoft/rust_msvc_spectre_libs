@@ -1,14 +1,15 @@
-# Project
+# msvc_spectre_libs
+Provides an easy way to link with the [Spectre-mitigated](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) libraries for `msvc` targets.
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+To use, add this crate as a `dependency` in your `Cargo.toml`.
 
-As the maintainer of this project, please make a few updates:
+The Spectre-mitigated libs can be installed using Visual Studio Installer. For example:
+`MSVC v143 - VS 2022 C++ x64/x86 Spectre-mitigated libs (Latest)`
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Error handling
+If the Spectre-mitigated libs are not available, the build will issue a warning and continue.
+
+Alternatively, to make the build panic instead, activate the `error` feature of this crate.
 
 ## Contributing
 
