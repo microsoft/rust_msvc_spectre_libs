@@ -1,6 +1,3 @@
-use cc::windows_registry;
-use std::{env, path::Path};
-
 fn main() {
     #[cfg(all(target_os = "windows", target_env = "msvc"))]
     add_spectre_link_search();
@@ -8,7 +5,11 @@ fn main() {
 
 /// Windows requires additional steps to find the spectre-mitigated CRT libs.
 /// More info: https://docs.microsoft.com/en-us/cpp/build/reference/qspectre
+#[cfg(all(target_os = "windows", target_env = "msvc"))]
 fn add_spectre_link_search() {
+    use cc::windows_registry;
+    use std::{env, path::Path};
+
     let target = env::var("TARGET").expect("missing TARGET");
     let arch = env::var("CARGO_CFG_TARGET_ARCH").expect("missing CARGO_CFG_TARGET_ARCH");
     let arch = match arch.as_str() {
