@@ -1,6 +1,6 @@
 [package]
 name = "msvc_spectre_libs"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
 description = """
 Provides an easy way to link with the Spectre-mitigated libraries for Windows MSVC targets.
