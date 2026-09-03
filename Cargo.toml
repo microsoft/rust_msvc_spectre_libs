@@ -9,7 +9,7 @@ Does nothing for other targets.
 build = "build.rs"
 keywords = ["spectre", "msvc", "mitigated", "crt"]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/microsoft/rust_msvc_spectre_libs"
+repository = "https://github.com/microsoft/oxidizer/tree/main/crates/msvc_spectre_libs"
 
 [target.'cfg(all(target_os = "windows", target_env = "msvc"))'.build-dependencies]
 cc = "1.0"
