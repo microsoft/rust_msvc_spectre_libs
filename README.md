@@ -1,4 +1,12 @@
 # msvc_spectre_libs
+
+> [!IMPORTANT]
+> Development of `msvc_spectre_libs` has moved to the
+> [Oxidizer repository](https://github.com/microsoft/oxidizer/tree/main/crates/msvc_spectre_libs).
+> This repository is retained for historical reference and is no longer used
+> for active development. Please open issues and pull requests in
+> [microsoft/oxidizer](https://github.com/microsoft/oxidizer).
+
 Provides an easy way to link with the [Spectre-mitigated](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) libraries for `msvc` targets.
 
 To use, add this crate as a `dependency` in your `Cargo.toml`.
